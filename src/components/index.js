@@ -1,3 +1,4 @@
-import TextBox from './textInput';
+import CustomTextInput from './textInput';
+import CustomButton from './customButton';
 
-export {TextBox};
+export {CustomTextInput, CustomButton};
