@@ -1,14 +1,12 @@
 import React from 'react';
 import {MainContainer, TextInput} from './style';
 
-const textInput = props => {
-  const {placeholder, color, bgColor} = props;
+export default CustomTextInput = props => {
+  const {placeholder, color, borderColor, bgColor} = props;
 
   return (
-    <MainContainer color={color} bgColor={bgColor}>
-      <TextInput placeholder={placeholder} />
+    <MainContainer bgColor={bgColor} borderColor={borderColor}>
+      <TextInput color={color} placeholder={placeholder} />
     </MainContainer>
   );
 };
-
-export default textInput;
