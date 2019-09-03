@@ -4,6 +4,7 @@ import {MainContainer, TextInput} from './style';
 export default CustomTextInput = props => {
   const {
     placeholder,
+    placeholderColor,
     color,
     borderColor,
     bgColor,
@@ -16,6 +17,7 @@ export default CustomTextInput = props => {
       <TextInput
         color={color}
         placeholder={placeholder}
+        placeholderTextColor={placeholderColor}
         onChangeText={changeHandler}
         secureTextEntry={secureTextEntry ? secureTextEntry : false}
       />
