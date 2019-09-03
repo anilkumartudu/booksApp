@@ -2,11 +2,12 @@ import styled from 'styled-components/native';
 import theme from '../../theme';
 
 export const MainContainer = styled.View`
+  margin: 10px 0px;
   padding-left: 20px;
   border-width: 1px;
   border-radius: 30px;
   border-color: ${props =>
-    props.borderColor ? props.borderColor : theme.colors.black};
+    props.borderColor ? props.borderColor : theme.colors.transparent};
   background-color: ${props =>
     props.bgColor ? props.bgColor : theme.colors.transparent};
 `;

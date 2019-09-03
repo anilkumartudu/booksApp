@@ -1,10 +1,13 @@
 export default Theme = {
   colors: {
+    transparent: '#ffffff00',
     black: '#000000',
     white: '#ffffff',
-    transparent: '#ffffff00',
   },
   fontFamily: {},
   fontSize: {},
-  fontWeight: {},
+  fontWeight: {
+    normal: 100,
+    bold: '500',
+  },
 };
