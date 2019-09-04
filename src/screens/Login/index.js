@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, Image, ImageBackground} from 'react-native';
+import {Text, Image, ImageBackground} from 'react-native';
 import {CustomTextInput, CustomButton, CustomLink} from '../../components';
 import theme from '../../theme';
 import {MainContainer, RowContainer, ColumnContainer} from './style';

@@ -7,7 +7,7 @@ export default Theme = {
   fontFamily: {},
   fontSize: {},
   fontWeight: {
-    normal: 100,
+    normal: '100',
     bold: '500',
   },
 };
