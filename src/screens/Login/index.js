@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
-import {Text, Image, ImageBackground} from 'react-native';
-import {CustomTextInput, CustomButton, CustomLink} from '../../components';
+import {Text, ImageBackground} from 'react-native';
+import {
+  CustomButton,
+  CustomIcon,
+  CustomLink,
+  CustomTextInput,
+} from '../../components';
 import theme from '../../theme';
 import {MainContainer, RowContainer, ColumnContainer} from './style';
 
@@ -9,15 +14,11 @@ class Login extends Component {
     return (
       <ImageBackground
         source={require('../../assets/photo-1495640452828-3df6795cf69b.jpeg')}
-        style={{width: '100%', height: '100%'}}
+        style={{height: '100%', width: '100%'}}
         resizeMode="cover">
         <MainContainer>
           <ColumnContainer>
-            <Image
-              source={require('../../assets/book.png')}
-              style={{width: 125, height: 125}}
-              resizeMode="contain"
-            />
+            <CustomIcon name="study" height="125" width="125" />
             <Text
               style={{
                 color: theme.colors.white,

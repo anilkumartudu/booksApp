@@ -1,5 +1,6 @@
-import CustomTextInput from './customTextInput';
 import CustomButton from './customButton';
+import CustomIcon from './customIcon';
 import CustomLink from './customLink';
+import CustomTextInput from './customTextInput';
 
-export {CustomTextInput, CustomButton, CustomLink};
+export {CustomButton, CustomIcon, CustomLink, CustomTextInput};
