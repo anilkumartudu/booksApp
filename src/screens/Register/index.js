@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
 import {Image, ImageBackground} from 'react-native';
 import ImagePicker from 'react-native-image-picker';
-import {CustomTextInput, CustomButton, CustomLink} from '../../components';
+import {
+  CustomButton,
+  CustomIcon,
+  CustomLink,
+  CustomTextInput,
+} from '../../components';
 import theme from '../../theme';
 import {MainContainer, RowContainer, ImageContainer} from './style';
 
@@ -34,7 +39,7 @@ class Register extends Component {
     return (
       <ImageBackground
         source={require('../../assets/photo-1495640452828-3df6795cf69b.jpeg')}
-        style={{width: '100%', height: '100%'}}
+        style={{height: '100%', width: '100%'}}
         resizeMode="cover">
         <MainContainer>
           <RowContainer>
@@ -42,15 +47,11 @@ class Register extends Component {
               {avatarSource ? (
                 <Image
                   source={{uri: avatarSource.uri}}
-                  style={{width: 124, height: 124, borderRadius: 70}}
+                  style={{height: 124, width: 124, borderRadius: 70}}
                   resizeMode="cover"
                 />
               ) : (
-                <Image
-                  source={require('../../assets/add.png')}
-                  style={{width: 80, height: 80}}
-                  resizeMode="cover"
-                />
+                <CustomIcon name={'add'} height="70" width="70" />
               )}
             </ImageContainer>
           </RowContainer>
