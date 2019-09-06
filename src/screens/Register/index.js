@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {Image, ImageBackground} from 'react-native';
+import {Image, ImageBackground, Dimensions} from 'react-native';
 import ImagePicker from 'react-native-image-picker';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {
   CustomButton,
   CustomIcon,
@@ -35,64 +36,71 @@ class Register extends Component {
 
   render() {
     const {avatarSource} = this.state;
+    const {height, width} = Dimensions.get('window');
 
     return (
       <ImageBackground
         source={require('../../assets/photo-1495640452828-3df6795cf69b.jpeg')}
         style={{height: '100%', width: '100%'}}
         resizeMode="cover">
-        <MainContainer>
-          <RowContainer>
-            <ImageContainer onPress={this.imagePickerHandler}>
-              {avatarSource ? (
-                <Image
-                  source={{uri: avatarSource.uri}}
-                  style={{height: 124, width: 124, borderRadius: 70}}
-                  resizeMode="cover"
-                />
-              ) : (
-                <CustomIcon name={'add'} height="70" width="70" />
-              )}
-            </ImageContainer>
-          </RowContainer>
-          <CustomTextInput
-            placeholder="Name"
-            placeholderColor={theme.colors.white}
-            color={theme.colors.white}
-            bgColor="rgba(255,255,255,0.4)"
-          />
-          <CustomTextInput
-            placeholder="Email"
-            placeholderColor={theme.colors.white}
-            color={theme.colors.white}
-            bgColor="rgba(255,255,255,0.4)"
-          />
-          <CustomTextInput
-            placeholder="Password"
-            placeholderColor={theme.colors.white}
-            color={theme.colors.white}
-            bgColor="rgba(255,255,255,0.4)"
-            secureTextEntry={true}
-          />
-          <CustomTextInput
-            placeholder="Repeat Password"
-            placeholderColor={theme.colors.white}
-            color={theme.colors.white}
-            bgColor="rgba(255,255,255,0.4)"
-            secureTextEntry={true}
-          />
-          <CustomButton
-            name="CREATE ACCOUNT"
-            color={theme.colors.black}
-            bgColor={theme.colors.white}
-          />
-          <RowContainer>
-            <CustomLink
-              name=" Already have an account?"
+        <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
+          <MainContainer height={height} width={width}>
+            <RowContainer>
+              <ImageContainer onPress={this.imagePickerHandler}>
+                {avatarSource ? (
+                  <Image
+                    source={{uri: avatarSource.uri}}
+                    style={{height: 124, width: 124, borderRadius: 70}}
+                    resizeMode="cover"
+                  />
+                ) : (
+                  <CustomIcon name={'add'} height="70" width="70" />
+                )}
+              </ImageContainer>
+            </RowContainer>
+            <CustomTextInput
+              iconName="user"
+              placeholder="Name"
+              placeholderColor={theme.colors.white}
               color={theme.colors.white}
+              bgColor="rgba(255,255,255,0.4)"
             />
-          </RowContainer>
-        </MainContainer>
+            <CustomTextInput
+              iconName="email"
+              placeholder="Email"
+              placeholderColor={theme.colors.white}
+              color={theme.colors.white}
+              bgColor="rgba(255,255,255,0.4)"
+            />
+            <CustomTextInput
+              iconName="lock"
+              placeholder="Password"
+              placeholderColor={theme.colors.white}
+              color={theme.colors.white}
+              bgColor="rgba(255,255,255,0.4)"
+              secureTextEntry={true}
+            />
+            <CustomTextInput
+              iconName="lock"
+              placeholder="Repeat Password"
+              placeholderColor={theme.colors.white}
+              color={theme.colors.white}
+              bgColor="rgba(255,255,255,0.4)"
+              secureTextEntry={true}
+            />
+            <CustomButton
+              name="CREATE ACCOUNT"
+              color={theme.colors.black}
+              bgColor={theme.colors.white}
+            />
+            <RowContainer>
+              <CustomLink
+                name=" Already have an account?"
+                color={theme.colors.white}
+              />
+            </RowContainer>
+          </MainContainer>
+        </KeyboardAwareScrollView>
       </ImageBackground>
     );
   }
