@@ -2,9 +2,9 @@ import styled from 'styled-components/native';
 import theme from '../../theme';
 
 export const Button = styled.TouchableOpacity`
-  margin: 10px 0px;
   justify-content: center;
   align-items: center;
+  margin: 10px 0px;
   border-width: 1px;
   border-radius: 30px;
   border-color: ${props =>
