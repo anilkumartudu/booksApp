@@ -90,12 +90,14 @@ class Register extends Component {
             />
             <CustomButton
               name="CREATE ACCOUNT"
+              onPress={() => alert('CREATE ACCOUNT')}
               color={theme.colors.black}
               bgColor={theme.colors.white}
             />
             <RowContainer>
               <CustomLink
                 name=" Already have an account?"
+                onPress={() => this.props.navigation.navigate('Login')}
                 color={theme.colors.white}
               />
             </RowContainer>

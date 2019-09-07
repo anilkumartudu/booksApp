@@ -6,9 +6,9 @@ export const MainContainer = styled.View`
   justify-content: center;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
-  height: ${props => (props.height ? props.height : null)};
-  width: ${props => (props.width ? props.width : null)};
 `;
+// height: ${props => (props.height ? props.height : null)};
+// width: ${props => (props.width ? props.width : null)};
 
 export const RowContainer = styled.View`
   flex-direction: row;

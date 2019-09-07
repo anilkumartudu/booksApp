@@ -5,7 +5,7 @@ import {CustomButton, CustomLink, CustomTextInput} from '../../components';
 import theme from '../../theme';
 import {MainContainer, RowContainer, ColumnContainer} from './style';
 
-class ForgotPassword extends Component {
+class SetPassword extends Component {
   render() {
     const {height, width} = Dimensions.get('window');
 
@@ -22,40 +22,43 @@ class ForgotPassword extends Component {
               <Text
                 style={{
                   color: theme.colors.white,
-                  fontWeight: theme.fontWeight.bold,
-                  fontSize: 38,
-                }}>
-                Forgot Password?
-              </Text>
-              <Text
-                style={{
-                  color: theme.colors.white,
                   fontWeight: theme.fontWeight.normal,
                   fontSize: 22,
                 }}>
-                Enter your email address here to receive further instructions.
+                One Time Password (OTP) has been sent to your email address,
+                please enter the same here and set your password as desired.
               </Text>
             </ColumnContainer>
             <CustomTextInput
-              iconName="email"
-              placeholder="Email"
+              iconName="lock"
+              placeholder="OTP"
               placeholderColor={theme.colors.white}
               color={theme.colors.white}
               bgColor="rgba(255,255,255,0.4)"
+              secureTextEntry={true}
+            />
+            <CustomTextInput
+              iconName="lock"
+              placeholder="Password"
+              placeholderColor={theme.colors.white}
+              color={theme.colors.white}
+              bgColor="rgba(255,255,255,0.4)"
+              secureTextEntry={true}
+            />
+            <CustomTextInput
+              iconName="lock"
+              placeholder="Repeat Password"
+              placeholderColor={theme.colors.white}
+              color={theme.colors.white}
+              bgColor="rgba(255,255,255,0.4)"
+              secureTextEntry={true}
             />
             <CustomButton
-              name="SEND"
-              onPress={() => alert('SEND')}
+              name="SET PASSWORD"
+              onPress={() => alert('SET PASSWORD')}
               color={theme.colors.black}
               bgColor={theme.colors.white}
             />
-            <RowContainer>
-              <CustomLink
-                name="Back To Login"
-                onPress={() => this.props.navigation.navigate('Login')}
-                color={theme.colors.white}
-              />
-            </RowContainer>
           </MainContainer>
         </KeyboardAwareScrollView>
       </ImageBackground>
@@ -63,4 +66,4 @@ class ForgotPassword extends Component {
   }
 }
 
-export default ForgotPassword;
+export default SetPassword;
