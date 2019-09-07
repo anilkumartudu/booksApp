@@ -49,12 +49,21 @@ class Login extends Component {
             />
             <CustomButton
               name="LOGIN"
+              onPress={() => alert('LOGIN')}
               color={theme.colors.black}
               bgColor={theme.colors.white}
             />
             <RowContainer>
-              <CustomLink name="Register" color={theme.colors.white} />
-              <CustomLink name="Forgot Password" color={theme.colors.white} />
+              <CustomLink
+                name="Register"
+                onPress={() => this.props.navigation.navigate('Register')}
+                color={theme.colors.white}
+              />
+              <CustomLink
+                name="Forgot Password"
+                onPress={() => this.props.navigation.navigate('ForgotPassword')}
+                color={theme.colors.white}
+              />
             </RowContainer>
           </MainContainer>
         </KeyboardAwareScrollView>

@@ -1,9 +1,17 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, StatusBar} from 'react-native';
+import MainContainer from './navigation/mainContainer';
+import theme from './theme';
 
-const booksApp = () => (
-  <View>
-    <Text>Books App</Text>
+export default booksApp = () => (
+  <View style={{flex: 1}}>
+    <StatusBar
+      barStyle="light-content"
+      translucent={true}
+      backgroundColor={theme.colors.black}
+    />
+    <View style={{flex: 1, marginTop: StatusBar.currentHeight}}>
+      <MainContainer />
+    </View>
   </View>
 );
-export default booksApp;
