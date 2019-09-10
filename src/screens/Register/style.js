@@ -5,10 +5,8 @@ export const MainContainer = styled.View`
   flex: 1;
   justify-content: center;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: ${theme.colors.murkyBlack};
 `;
-// height: ${props => (props.height ? props.height : null)};
-// width: ${props => (props.width ? props.width : null)};
 
 export const RowContainer = styled.View`
   flex-direction: row;
@@ -23,7 +21,7 @@ export const ImageContainer = styled.TouchableOpacity`
   border-radius: 70px;
   border-width: 4px;
   border-color: ${theme.colors.white};
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: ${theme.colors.murkyWhite};
   height: 130px;
   width: 130px;
 `;

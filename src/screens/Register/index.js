@@ -40,11 +40,11 @@ class Register extends Component {
 
     return (
       <ImageBackground
-        source={require('../../assets/photo-1495640452828-3df6795cf69b.jpeg')}
+        source={require('../../assets/background.jpg')}
         style={{height: '100%', width: '100%'}}
         resizeMode="cover">
         <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
-          <MainContainer height={height} width={width}>
+          <MainContainer style={{height: height, width: width}}>
             <RowContainer>
               <ImageContainer onPress={this.imagePickerHandler}>
                 {avatarSource ? (
@@ -63,21 +63,21 @@ class Register extends Component {
               placeholder="Name"
               placeholderColor={theme.colors.white}
               color={theme.colors.white}
-              bgColor="rgba(255,255,255,0.4)"
+              bgColor={theme.colors.murkyWhite}
             />
             <CustomTextInput
               iconName="email"
               placeholder="Email"
               placeholderColor={theme.colors.white}
               color={theme.colors.white}
-              bgColor="rgba(255,255,255,0.4)"
+              bgColor={theme.colors.murkyWhite}
             />
             <CustomTextInput
               iconName="lock"
               placeholder="Password"
               placeholderColor={theme.colors.white}
               color={theme.colors.white}
-              bgColor="rgba(255,255,255,0.4)"
+              bgColor={theme.colors.murkyWhite}
               secureTextEntry={true}
             />
             <CustomTextInput
@@ -85,7 +85,7 @@ class Register extends Component {
               placeholder="Repeat Password"
               placeholderColor={theme.colors.white}
               color={theme.colors.white}
-              bgColor="rgba(255,255,255,0.4)"
+              bgColor={theme.colors.murkyWhite}
               secureTextEntry={true}
             />
             <CustomButton
