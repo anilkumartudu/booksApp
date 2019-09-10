@@ -5,10 +5,8 @@ export const MainContainer = styled.View`
   flex: 1;
   justify-content: center;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: ${theme.colors.murkyBlack};
 `;
-// height: ${props => (props.height ? props.height : null)};
-// width: ${props => (props.width ? props.width : null)};
 
 export const RowContainer = styled.View`
   flex-direction: row;
@@ -19,4 +17,12 @@ export const RowContainer = styled.View`
 export const ColumnContainer = styled.View`
   align-items: flex-start;
   margin-bottom: 40px;
+`;
+
+export const CustomText = styled.Text`
+  color: ${theme.colors.white};
+  font-weight: ${props =>
+    props.fontWeight ? theme.fontWeight.bold : theme.fontWeight.normal};
+  font-size: ${props =>
+    props.fontSize ? theme.fontSize.huge : theme.fontSize.large};
 `;

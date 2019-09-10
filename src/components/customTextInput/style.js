@@ -17,5 +17,6 @@ export const MainContainer = styled.View`
 export const TextInput = styled.TextInput`
   margin-left: 5px;
   color: ${props => (props.color ? props.color : theme.colors.black)};
+  font-size: ${theme.fontSize.normal};
   width: 270px;
 `;

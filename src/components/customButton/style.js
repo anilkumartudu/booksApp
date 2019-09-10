@@ -17,4 +17,5 @@ export const Button = styled.TouchableOpacity`
 export const ButtonText = styled.Text`
   color: ${props => (props.color ? props.color : theme.colors.black)};
   font-weight: ${theme.fontWeight.bold};
+  font-size: ${theme.fontSize.normal};
 `;

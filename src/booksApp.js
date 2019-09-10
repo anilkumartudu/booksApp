@@ -10,8 +10,6 @@ export default booksApp = () => (
       translucent={true}
       backgroundColor={theme.colors.black}
     />
-    <View style={{flex: 1, marginTop: StatusBar.currentHeight}}>
-      <MainContainer />
-    </View>
+    <MainContainer />
   </View>
 );
