@@ -6,6 +6,7 @@ import HomeScreen from '../screens/Home';
 import LoginScreen from '../screens/Login';
 import RegisterScreen from '../screens/Register';
 import SetPasswordScreen from '../screens/SetPassword';
+import ViewMyBooksScreen from '../screens/ViewMyBooks';
 
 const AppNavigator = createStackNavigator(
   {
@@ -33,9 +34,14 @@ const AppNavigator = createStackNavigator(
         header: null,
       }),
     },
-
     SetPassword: {
       screen: SetPasswordScreen,
+      navigationOptions: () => ({
+        header: null,
+      }),
+    },
+    ViewMyBooks: {
+      screen: ViewMyBooksScreen,
       navigationOptions: () => ({
         header: null,
       }),

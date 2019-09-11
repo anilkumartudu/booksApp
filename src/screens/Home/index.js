@@ -15,28 +15,28 @@ class Home extends Component {
         resizeMode="cover">
         <MainContainer>
           <SubContainer>
-            <SubContainerText color={theme.colors.vMB}>
+            <SubContainerText color={theme.colors.vMB}></SubContainerText>
+          </SubContainer>
+          <SubContainer>
+            <SubContainerText
+              color={theme.colors.bC}
+              onPress={() => this.props.navigation.navigate('ViewMyBooks')}>
               View my Books
             </SubContainerText>
           </SubContainer>
           <SubContainer>
-            <SubContainerText color={theme.colors.bC}>
+            <SubContainerText color={theme.colors.bA}>
               Browse Categories
             </SubContainerText>
           </SubContainer>
           <SubContainer>
-            <SubContainerText color={theme.colors.bA}>
+            <SubContainerText color={theme.colors.uP}>
               Browse Authors
             </SubContainerText>
           </SubContainer>
           <SubContainer>
-            <SubContainerText color={theme.colors.uP}>
-              User Profile
-            </SubContainerText>
-          </SubContainer>
-          <SubContainer>
             <SubContainerText color={theme.colors.spare}>
-              Spare
+              User Profile
             </SubContainerText>
           </SubContainer>
         </MainContainer>
