@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {Text, ImageBackground, StatusBar} from 'react-native';
+import {ImageBackground, StatusBar} from 'react-native';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import theme from '../../theme';
-import {MainContainer, RowContainer, ColumnContainer, TabText} from './style';
+import {TabText} from './style';
 
 import {
   currentlyReadingRoute,
