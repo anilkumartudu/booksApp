@@ -16,3 +16,9 @@ cd booksApp && npm install
 ```bash
 react-native run-android
 ```
+
+# Screenshots
+
+<img src="https://raw.githubusercontent.com/aniltudu/booksApp/master/screenshots/screenshot0.png" width="280"> <img src="https://raw.githubusercontent.com/aniltudu/booksApp/master/screenshots/screenshot1.png" width="280"> <img src="https://raw.githubusercontent.com/aniltudu/booksApp/master/screenshots/screenshot2.png" width="280">
+
+<img src="https://raw.githubusercontent.com/aniltudu/booksApp/master/screenshots/screenshot3.png" width="280"> <img src="https://raw.githubusercontent.com/aniltudu/booksApp/master/screenshots/screenshot4.png" width="280">
