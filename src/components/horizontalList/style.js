@@ -8,3 +8,10 @@ export const MainContainer = styled.Text`
   color: ${theme.colors.white};
   font-size: ${theme.fontSize.large};
 `;
+
+export const ItemSeparator = styled.View`
+  margin-left: 5%;
+  height: 1;
+  width: 90%;
+  background-color: ${theme.colors.white};
+`;
